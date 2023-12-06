@@ -62,7 +62,7 @@ while (!inputNum?.trim() || isNaN(inputNum)) {
 if (inputNum === null) {
   alert('Canceled');
 } else {
-  let number = parseInt(inputNum);
+  const number = parseInt(inputNum);
   let exponent = 0;
 
   while (Math.pow(3, exponent) < number) {
