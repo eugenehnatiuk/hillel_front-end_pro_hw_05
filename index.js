@@ -20,7 +20,7 @@ while (currentUSD <= maxUSD) {
  Простим називається ціле число, більше ніж 1, яке не має інших дільників, крім 1 і себе(1 не є простим).*/
 
 function isPrime(number) {
-  if (number < 2) {
+  if (number < 2 || !Number.isInteger(number)) {
     return false;
   }
   for (let i = 2; i < number; i++) {
@@ -62,7 +62,7 @@ while (!inputNum?.trim() || isNaN(inputNum)) {
 if (inputNum === null) {
   alert('Canceled');
 } else {
-  const number = parseInt(inputNum);
+  const number = parseFloat(inputNum);
   let exponent = 0;
 
   while (Math.pow(3, exponent) < number) {
@@ -74,3 +74,5 @@ if (inputNum === null) {
       : `This number cannot be obtained by raising the number 3 to some whole power.`
   );
 }
+
+
